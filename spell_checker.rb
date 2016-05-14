@@ -43,7 +43,7 @@ class SpellChecker
       return suggestion if suggestion == word
 
       suggestion_no_vowels = suggestion.gsub(@vowels, '')
-      word_no_vowels       = word			 .gsub(@vowels, '')
+      word_no_vowels       = word      .gsub(@vowels, '')
 
       # Check length so that we can see if vowels were incorrect
       if suggestion.length == word.length
@@ -52,7 +52,7 @@ class SpellChecker
         # Check if input has multiple letters
       else
         suggestion_unique = suggestion_no_vowels.split('').uniq.join
-        word_unique		    = word_no_vowels			.split('').uniq.join
+        word_unique       = word_no_vowels      .split('').uniq.join
 
         return suggestion if suggestion_unique == word_unique
       end
